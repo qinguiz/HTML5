@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>arrows4</title>
+	<style>
+		body{
+			text-align: center;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var canvas = document.getElementsByTagName("canvas")[0];
+			canvas.width = 800;
+			canvas.height = 800;
+			var ctx = canvas.getContext("2d");
+			ctx.lineWidth = 10;
+
+			ctx.beginPath();    //创建独立的空间,无路径起点
+			ctx.moveTo(100,350);
+			ctx.lineTo(500,350);
+			ctx.lineTo(500,200);
+			ctx.lineTo(700,400);
+			ctx.lineTo(500,600);
+			ctx.lineTo(500,450);
+			ctx.lineTo(100,450);
+			// ctx.lineTo(100,350); 使用closePath最后一个路径是可以忽略的
+			ctx.closePath();	//闭合路径
+			ctx.fillStyle = "yellow"; //填充状态
+			ctx.fill(); //填充绘制
+			ctx.stroke();	//绘制
+		}
+	</script>
+</head>
+<body>
+	<canvas></canvas>
+</body>
+</html>
