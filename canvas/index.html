@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas</title>
+	<script>
+		function drawDiagonal(){
+			var canvas = document.querySelector("#diagonal");
+			var ctx = canvas.getContext("2d");
+
+			ctx.save();
+
+			ctx.translate(70,140);
+
+			ctx.beginPath();
+			ctx.moveTo(0,0);
+			ctx.lineTo(70,-70);
+
+			ctx.stroke();
+			ctx.restore();
+		}
+		window.addEventListener("load",drawDiagonal,true);
+	</script>
+</head>
+<body>
+	<canvas id="diagonal" style="border:1px solid black;" width="200" height="200"></canvas>
+</body>
+</html>

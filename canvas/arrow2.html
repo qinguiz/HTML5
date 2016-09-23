@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>arrows2</title>
+	<script>
+		window.onload = function(){
+			var canvas = document.getElementsByTagName("canvas")[0];
+			canvas.width = 800;
+			canvas.height = 800;
+			var ctx = canvas.getContext("2d");
+			ctx.lineWidth = 10;
+			
+			ctx.beginPath();
+			ctx.lineTo(100,200);
+			ctx.lineTo(300,400);
+			ctx.lineTo(100,600);
+			ctx.strokeStyle = "red";
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.lineTo(300,200);
+			ctx.lineTo(500,400);
+			ctx.lineTo(300,600);
+			ctx.strokeStyle = "green";
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.lineTo(500,200);
+			ctx.lineTo(700,400);
+			ctx.lineTo(500,600);
+			ctx.strokeStyle = "blue";
+			ctx.stroke();
+		}
+	</script>
+</head>
+<body>
+	<canvas></canvas>
+</body>
+</html>

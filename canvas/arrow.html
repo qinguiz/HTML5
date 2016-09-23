@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>arrows</title>
+	<script>
+		window.onload = function(){
+			var canvas = document.getElementsByTagName("canvas")[0];
+			var ctx = canvas.getContext("2d");
+			canvas.width = 800;
+			canvas.height = 800;
+			ctx.moveTo(100,350);
+			ctx.lineTo(500,350);
+			ctx.lineTo(500,200);
+			ctx.lineTo(700,400);
+			ctx.lineTo(500,600);
+			ctx.lineTo(500,450);
+			ctx.lineTo(100,450);
+			ctx.lineWidth = 10;
+			ctx.stroke();
+		}
+	</script>
+</head>
+<body>
+	<canvas></canvas>
+</body>
+</html>
