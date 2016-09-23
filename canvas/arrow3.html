@@ -2,12 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>arrows2</title>
-	<style>
-		body{
-			text-align: center;
-		}
-	</style>
+	<title>arrows3</title>
 	<script>
 		window.onload = function(){
 			var canvas = document.getElementsByTagName("canvas")[0];
@@ -16,25 +11,16 @@
 			var ctx = canvas.getContext("2d");
 			ctx.lineWidth = 10;
 
-			ctx.beginPath();
-			ctx.lineTo(100,200);
-			ctx.lineTo(300,400);
-			ctx.lineTo(100,600);
-			ctx.strokeStyle = "red";
-			ctx.stroke();
-
-			ctx.beginPath();
-			ctx.lineTo(300,200);
-			ctx.lineTo(500,400);
-			ctx.lineTo(300,600);
-			ctx.strokeStyle = "green";
-			ctx.stroke();
-
-			ctx.beginPath();
+			ctx.beginPath();    //创建独立的空间,无路径起点
+			ctx.moveTo(100,350);
+			ctx.lineTo(500,350);
 			ctx.lineTo(500,200);
 			ctx.lineTo(700,400);
 			ctx.lineTo(500,600);
-			ctx.strokeStyle = "blue";
+			ctx.lineTo(500,450);
+			ctx.lineTo(100,450);
+			ctx.lineTo(100,350);
+			ctx.closePath();	//闭合路径
 			ctx.stroke();
 		}
 	</script>
